@@ -1,7 +1,7 @@
 public class Division{
     public static void main(String[] args){
-        int wholeNum1 = 5;
-        int wholeNum2 = 2;
+        double wholeNum1 = 5.0;
+        double wholeNum2 = 2.0;
 
         int wholeResult = wholeNum1 / wholeNum2;
         System.out.println("int result: " + wholeResult);
