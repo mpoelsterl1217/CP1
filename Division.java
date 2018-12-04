@@ -9,7 +9,7 @@ public class Division{
         double doubleResult = wholeNum1 / wholeNum2;
         System.out.println("double result: " + doubleResult);
 
-int remainderResult = wholeNum1 % wholeNum2;
-System.out.println("remainder result: " + remainderResult);
+        int remainderResult = wholeNum1 % wholeNum2;
+        System.out.println("remainder result: " + remainderResult);
     }
 }
