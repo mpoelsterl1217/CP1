@@ -36,7 +36,7 @@ public class GradeCalculator {
     double quizAvg = (quiz1 + quiz2)/2.0;
 
     //Calculate Weighted Average of Grade
-    double grade = ((hwAvg*20) + (quizAvg*50) + (finalGrade*30))/100.0;
+    double grade = (hwAvg * .20) + (quizAvg * .50) + (finalGrade * .30);
 
     //Output category and final Average
     System.out.println("\nThe average of the Homework is: " + hwAvg + "%");
