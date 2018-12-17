@@ -10,23 +10,23 @@ public class GradeCalculator {
 
     //Take in homework grades
     System.out.println("\nPlease Enter Grades for the Homework");
-    System.out.println("HW1: ");
+    System.out.print("HW1: ");
     double hw1 = scan.nextDouble();
-    System.out.println("HW2: ");
+    System.out.print("HW2: ");
     double hw2 = scan.nextDouble();
-    System.out.println("HW3: ");
+    System.out.print("HW3: ");
     double hw3 = scan.nextDouble();
 
     //Take in Quizzes
     System.out.println("\nPlease Enter Grades for the Quizzes");
-    System.out.println("Quiz1: ");
+    System.out.print("Quiz1: ");
     double quiz1 = scan.nextDouble();
-    System.out.println("Quiz2: ");
+    System.out.print("Quiz2: ");
     double quiz2 = scan.nextDouble();
 
     //Take in final
     System.out.println("\nPlease Enter Grades for the Final Exam");
-    System.out.println("Final: ");
+    System.out.print("Final: ");
     double finalGrade = scan.nextDouble();
 
     //Calculate Homework Average
