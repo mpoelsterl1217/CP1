@@ -6,10 +6,10 @@ public class CashRegister {
     Scanner scan = new Scanner(System.in);
 
     //Read Bill amount and payment
-    System.out.println("Please Enter the amount of a Bill")
+    System.out.println("Please Enter the amount of a Bill");
     System.out.print("Bill: $");
     Double bill = scan.nextDouble();
-    System.out.println("\nPlease Enter the amount Paid")
+    System.out.println("\nPlease Enter the amount Paid");
     System.out.print("Payment: $");
     Double payment = scan.nextDouble();
 
