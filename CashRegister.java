@@ -4,9 +4,12 @@ public class CashRegister {
   public static void main(String[] args) {
     //Create Scanner object
     Scanner scan = new Scanner(System.in);
-    
+
+    //Welcome Message
+    System.out.println("Welcome to the Change Generator");
+
     //Read Bill amount and payment
-    System.out.println("Please Enter the amount of a Bill");
+    System.out.println("\nPlease Enter the amount of a Bill");
     System.out.print("Bill: $");
     Double bill = scan.nextDouble();
     System.out.println("\nPlease Enter the amount Paid");
@@ -41,6 +44,21 @@ public class CashRegister {
     //Calculate pennies
     int pennies = (int)(remainder / .01);
     remainder = remainder % .01;
+
+    //Try to fix rounding stuff
+    changeTotal = Math.floor(changeTotal*100) / 100; //rounds out the .000000004 stuff
+    Double total = (twenties*20.00) + (tens*10.00) + (fives*5.00) + (singles*1.00) + (quarters*.25) + (dimes*.10) + (nickels*.05) + (pennies*.01);
+    total = Math.floor(total*100) / 100; //rounds out the .0000000003 thing messing with conditionals
+    if (changeTotal > total) {
+      //not enough pennies
+      pennies += 1;
+    } else if (changeTotal < total) {
+      //too many pennies
+      pennies -= 1;
+    } else {
+      //right amount of pennies
+    }
+
     //Output Change due and breakdown of change
     System.out.println("\nChange: $" + changeTotal);
     System.out.println("$20: " + twenties);
