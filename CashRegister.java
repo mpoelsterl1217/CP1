@@ -12,7 +12,7 @@ public class CashRegister {
     System.out.println("\nPlease Enter the amount of a Bill");
     System.out.print("Bill: $");
     Double bill = scan.nextDouble();
-    System.out.println("\nPlease Enter the amount Paid");
+    System.out.println("\n\nPlease Enter the amount Paid");
     System.out.print("Paid: $");
     Double payment = scan.nextDouble();
 
@@ -60,7 +60,7 @@ public class CashRegister {
     }
 
     //Output Change due and breakdown of change
-    System.out.println("\nChange: $" + changeTotal);
+    System.out.println("\n\nChange: $" + changeTotal);
     System.out.println("$20: " + twenties);
     System.out.println("$10: " + tens);
     System.out.println("$5: " + fives);
