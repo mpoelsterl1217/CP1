@@ -156,8 +156,6 @@ public class ShakespeareInsult {
       "whey-face",
       "wagtail"
     };
-    System.out.println(adjective1.length);
-    System.out.println(adjective2.length);
-    System.out.println(noun.length);
+    System.out.println("Thou " + adjective1[(int)(Math.floor(Math.random()*50))] + " " + adjective2[(int)(Math.floor(Math.random()*50))] + " " + noun[(int)(Math.floor(Math.random()*50))]);
   }
 }
