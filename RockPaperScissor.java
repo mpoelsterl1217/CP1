@@ -6,9 +6,8 @@ public class RockPaperScissor {
     Scanner scan = new Scanner(System.in);
 
     //Get player1 input
-    System.out.println("Player 1:");
-    String move1 = scan.next();
-    System.out.println(move1);
+    System.out.print("Player 1:");
+    string move1 = scan.next();
 
     //Type stuff to hide other player move
     for (int i = 0; i <20; i++) {
@@ -16,11 +15,12 @@ public class RockPaperScissor {
     }
 
     //Get player2 input
-    System.out.println("Player 2:");
-    String move2 = scan.next();
-    System.out.println(move2);
+    System.out.print("Player 2:");
+    string move2 = scan.next();
 
     //output winner
+    System.out.println(move1);
+    System.out.println(move2);
     System.out.println(determineWinner(move1, move2));
     System.out.println(determineWinner("rock","paper"));
   }
@@ -34,7 +34,7 @@ public class RockPaperScissor {
       //player2 wins
       return "Player 2 wins";
     } else {
-      return "ERROR \n Input may be invalid";
+      return "ERROR \nInput may be invalid";
     }
   }
 }
