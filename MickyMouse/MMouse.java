@@ -9,13 +9,15 @@ public class MMouse extends JComponent{
   public void paintComponent(Graphics g){
 		Graphics2D g2 = (Graphics2D) g;
 
-		Rectangle box = new Rectangle(5, 10, 50, 30);
-		g2.draw(box);
+		g2.setColor(Color.black);
 
-		g2.setColor(Color.blue);
+		Ellipse2D.Double head = new Ellipse2D.Double(100, 100, 200, 200);
+		g2.fill(head);
 
-		Ellipse2D.Double circle = new Ellipse2D.Double(100, 100, 200, 200);
-		g2.fill(circle);
+    Ellipse2D.Double earL = new Ellipse2D.Double(50,50,100,100);
+    g2.fill(earL);
 
+    Ellipse2D.Double earR = new Ellipse2D.Double(250,50,100,100);
+    g2.fill(earR);
 	}
 }
