@@ -15,39 +15,36 @@ public class DrawingPicture extends JComponent
 
         Graphics2D g2 = (Graphics2D)g;
 
-	      /******** Put your code here  *********/
+	      //Define widths and colors
         BasicStroke thick = new BasicStroke(40.0f);
-        BasicStroke gridStroke = new BasicStroke(1.0f);
-        g2.setStroke(thick);
-        Ellipse2D.Double logoRing = new Ellipse2D.Double(120, 120, 280, 280); //Creates Ellipes object at 100,100 with width 200, height 200
-        //g2.draw(logoRing); //fills the circle with blue
+        Color chiRed = new Color(206, 17, 45);
+        Color chiBlue = new Color(85, 193, 232);
 
-        g2.setStroke(gridStroke);
-        Ellipse2D.Double guideCircleCenter = new Ellipse2D.Double(160, 160, 200, 200); //Creates Ellipes object at 100,100 with width 200, height 200
-        g2.draw(guideCircleCenter); //fills the circle with blue
-        Ellipse2D.Double guideCircle1 = new Ellipse2D.Double(160, 60, 200, 200); //Creates Ellipes object at 100,100 with width 200, height 200
-        g2.draw(guideCircle1); //fills the circle with blue
-        Ellipse2D.Double guideCircle2 = new Ellipse2D.Double(160, 260, 200, 200); //Creates Ellipes object at 100,100 with width 200, height 200
-        g2.draw(guideCircle2); //fills the circle with blue
-        Ellipse2D.Double guideCircle3 = new Ellipse2D.Double(73, 110, 200, 200); //Creates Ellipes object at 100,100 with width 200, height 200
-        g2.draw(guideCircle3); //fills the circle with blue
-        Ellipse2D.Double guideCircle4 = new Ellipse2D.Double(73, 210, 200, 200); //Creates Ellipes object at 100,100 with width 200, height 200
-        g2.draw(guideCircle4); //fills the circle with blue
-        Ellipse2D.Double guideCircle5 = new Ellipse2D.Double(247, 110, 200, 200); //Creates Ellipes object at 100,100 with width 200, height 200
-        g2.draw(guideCircle5); //fills the circle with blue
-        Ellipse2D.Double guideCircle6 = new Ellipse2D.Double(247, 210, 200, 200); //Creates Ellipes object at 100,100 with width 200, height 200
-        g2.draw(guideCircle6); //fills the circle with blue
-
-        int[] xPoints = new int[] {260, 277, 347, 293, 347, 277, 260, 243, 173, 227, 173, 243};
-        int[] yPoints = new int[] {160, 227, 210, 260, 310, 293, 360, 293, 310, 260, 210, 227};
+        //Define all my objects
+        Ellipse2D.Double logoRing = new Ellipse2D.Double(120, 120, 280, 280);
+        int[] xPoints = new int[] {260, 277, 347, 293, 347, 277, 260, 243, 173, 227, 173, 243}; //define x coords for polygon
+        int[] yPoints = new int[] {160, 227, 210, 260, 310, 293, 360, 293, 310, 260, 210, 227}; //define y cords for polygon
         Polygon star = new Polygon(xPoints, yPoints, 12);
-        g2.drawPolygon(star);
+        Rectangle topStripe1 = new Rectangle(0, 20, 500, 20);
+        Rectangle topStripe2 = new Rectangle(0, 40, 500, 20);
+        Rectangle bottomStripe1 = new Rectangle(0, 460, 500, 20);
+        Rectangle bottomStripe2 = new Rectangle(0, 480, 500, 20);
 
-        Polygon hex = new Polygon(yPoints, xPoints, 6);
-        g2.drawPolygon(hex);
-        // comment this out once you have finished
-        g2.setStroke(gridStroke);
-        drawGrid(g2);
+        //Draw all of the elements
+        //Draw white background
+        g2.setColor(Color.white);
+        g2.fillRect(0,0,520,520);
+        //Draw red ones
+        g2.setColor(chiRed);
+        g2.fill(star);
+        g2.fill(topStripe2);
+        g2.fill(bottomStripe1);
+        //Draw blue ones
+        g2.setColor(chiBlue);
+        g2.setStroke(thick);
+        g2.draw(logoRing);
+        g2.fill(topStripe1);
+        g2.fill(bottomStripe2);
     }
     public void drawGrid(Graphics g2){
         g2.setColor(new Color(211, 211, 211));
