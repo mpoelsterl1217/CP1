@@ -4,8 +4,7 @@ public class DrawingFrame
 {
    public static void main(String[] args){
 
- // You should change the Title
-       JFrame frame = new JFrame("Frame for Picture");
+       JFrame frame = new JFrame("Chicago Star");
        frame.setSize(500, 540);
        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
