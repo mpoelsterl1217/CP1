@@ -4,7 +4,7 @@ public class DrawingFrame
 {
    public static void main(String[] args){
 
-       JFrame frame = new JFrame("Chicago Star");
+       JFrame frame = new JFrame("ChiTown");
        frame.setSize(500, 540);
        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 

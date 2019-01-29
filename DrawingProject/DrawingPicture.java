@@ -10,7 +10,7 @@ import java.awt.*;
 import java.awt.geom.*;
 
 public class DrawingPicture extends JComponent {
-    public void paintComponent(Graphics g) {
+  public void paintComponent(Graphics g) {
 
         //Create graphics object
         Graphics2D g2 = (Graphics2D)g;
@@ -51,5 +51,5 @@ public class DrawingPicture extends JComponent {
         g2.fill(topStripeInner);
         g2.fill(bottomStripeInner);
 
-      }
+    }
 }
