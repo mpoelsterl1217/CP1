@@ -36,7 +36,7 @@ def get_match(text, pattern, error_text = "Page doesn't appear to have the prope
 	return match
 
 def get_planet_radius(title):
-	infobox_text = get_first_infobox_text(title)
+	#infobox_text = get_first_infobox_text(title)
 	print(infobox_text)
 	pattern = "(?P<text>Polar radius|Polar radius[\s])(?P<radius>[\d]+\.[\d]+|[\d]+,[\d]+)"
 	error_text = "Page infobox has no polar radius information."
@@ -47,13 +47,13 @@ def get_planet_radius(title):
 	return radius
 
 #examples
-#print(get_planet_radius("Mars")) #should print 3,376.2
-#print(get_planet_radius("Earth")) #should print 6356.8
-#print(get_planet_radius("Jupiter")) #should print 66,854
-#print(get_planet_radius("Saturn")) #should print 54,364
+print(get_planet_radius("Mars")) #should print 3,376.2
+print(get_planet_radius("Earth")) #should print 6356.8
+print(get_planet_radius("Jupiter")) #should print 66,854
+print(get_planet_radius("Saturn")) #should print 54,364
 
 def get_birth_date(title):
-    infobox_text = get_first_infobox_text(title)
+    #infobox_text = get_first_infobox_text(title)
     print(infobox_text)
     pattern = "(?P<birth>[\d]+\-[\d]+\-[\d]+)"
     error_text = "Page infobox has no birth information. At least none in xxxx-xx-xx format"
